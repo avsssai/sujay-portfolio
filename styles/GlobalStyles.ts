@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
  /*
@@ -21,8 +21,8 @@ html, body {
   font-family:'Montserrat', sans-serif;
 }
 :root {
-  --font-primary:'Montserrat', sans-serif;
-  --font-secondary: 'Space Mono', monospace;
+  --font-primary:'Cabin', sans-serif;
+  --font-secondary: 'Lora', serif;
 }
 /*
   Typographic tweaks!
@@ -34,6 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: 0.2s background;
   background: var(--color-background);
+
 }
 /*
   6. Improve media defaults
