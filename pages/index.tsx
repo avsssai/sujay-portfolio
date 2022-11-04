@@ -33,21 +33,21 @@ const Home: NextPage = () => {
             <SocialMedia>
               <Image
                 src="/Facebook.svg"
-                alt="twitter social link"
+                alt="facebook social link"
                 layout="fill"
               />
             </SocialMedia>
             <SocialMedia>
               <Image
                 src="/instagram.svg"
-                alt="twitter social link"
+                alt="instagram social link"
                 layout="fill"
               />
             </SocialMedia>
             <SocialMedia>
               <Image
-                src="/linkedIn.svg"
-                alt="twitter social link"
+                src="/linkedin.svg"
+                alt="linkedin social link"
                 layout="fill"
               />
             </SocialMedia>
