@@ -1,7 +1,7 @@
 import React from 'react';
 import useDarkMode from '../../hooks/useDarkMode';
 import styled from 'styled-components';
-import { Moon, Sun } from 'react-feather';
+import { Moon, Sun, Menu } from 'react-feather';
 import Link from 'next/link';
 
 export default function Header(): JSX.Element {
@@ -37,7 +37,9 @@ export default function Header(): JSX.Element {
             <Sun onClick={toggleDarkMode} />
           )}
         </Item>
-        <MobileMenu>hi</MobileMenu>
+        <MobileMenu>
+          <Menu />
+        </MobileMenu>
       </HeaderRightContent>
     </HeaderWrapper>
   );
