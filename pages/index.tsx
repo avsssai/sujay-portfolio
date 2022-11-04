@@ -5,10 +5,19 @@ import Header from '../components/Header';
 import MaxWidthWrapper from '../components/MaxWidthWrapper';
 import { Twitter, Facebook, Linkedin, Instagram } from 'react-feather';
 import Footer from '../components/Footer/Footer';
+import Intro from '../components/Intro';
+import { motion } from 'framer-motion';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Wrapper>
+      <IntroWrapper
+        animate={{ opacity: 0, translateY: -1000 }}
+        initial={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 2.5, delay: 1.5 }}
+      >
+        <Intro />
+      </IntroWrapper>
       <Header />
       <MaxWidthWrapper>
         <ImageContainer>
@@ -55,9 +64,25 @@ const Home: NextPage = () => {
         </TextContainer>
       </MaxWidthWrapper>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+`;
+
+const IntroWrapper = styled(motion.div)`
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--color-primary);
+  opacity: 0;
+`;
 
 const ImageContainer = styled.div`
   height: 375px;
