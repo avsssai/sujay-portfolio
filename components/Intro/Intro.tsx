@@ -29,7 +29,11 @@ const PinkIntroText = styled(IntroText)`
 
 export default function Intro() {
   return (
-    <Wrapper>
+    <Wrapper
+    // animate={{ translateY: -1000 }}
+    // initial={{ translateY: 0 }}
+    // transition={{ duration: 1.5 }}
+    >
       <IntroText>Content management.</IntroText>
       <PinkIntroText
         animate={{ opacity: 1, translateY: 0 }}

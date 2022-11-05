@@ -53,7 +53,7 @@ const HeaderWrapper = styled.nav`
   margin-bottom: 2rem;
 `;
 const Logo = styled.span`
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   color: var(--color-textPrimary);
   font-size: 1.25rem;
   margin-left: 24px;

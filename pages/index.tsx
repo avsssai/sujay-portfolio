@@ -12,9 +12,9 @@ const Home: NextPage = () => {
   return (
     <Wrapper>
       <IntroWrapper
-        animate={{ opacity: 0, translateY: -1000 }}
+        animate={{ opacity: 0, translateY: -10000 }}
         initial={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 2.5, delay: 1.5 }}
+        transition={{ duration: 3, delay: 2.5 }}
       >
         <Intro />
       </IntroWrapper>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           <Band>
             Your brand might talk, I can make it <Color>sing.</Color>
           </Band>
-          <ActionButton>Hire Me</ActionButton>
+          <ActionButton>Get in touch</ActionButton>
           <SocialLinks>
             <SocialMedia>
               <Image
@@ -105,28 +105,34 @@ const TextContainer = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: clamp(1.5vw, 54px, 64px);
-  color: var(--color-accentPink);
-  font-family: var(--font-secondary);
+  font-size: clamp(2vw, 84px, 128px);
+
+  color: var(--color-textPrimary);
+  font-family: var(--font-primary);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 0.8;
   &:last-of-type {
     margin-bottom: 0.5rem;
+    color: var(--color-accentPink);
+    text-align: center;
   }
 `;
 
 const Title = styled.div`
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   color: var(--color-textPrimary);
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 `;
 
 const Band = styled.h4`
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   color: var(--color-textPrimary);
   font-weight: normal;
   margin-bottom: 1.5rem;
+  font-size: 12px;
+  text-align: center;
 `;
 const Color = styled.span`
   color: var(--color-accentPink);
@@ -160,7 +166,7 @@ const ActionButton = styled.button`
   padding: 0.5rem 0;
   color: var(--color-textPrimary);
   font-size: 1.5rem;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-weight: 500;
   margin-bottom: 1.5rem;
 `;

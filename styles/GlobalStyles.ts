@@ -21,7 +21,7 @@ html, body {
   font-family:'Montserrat', sans-serif;
 }
 :root {
-  --font-primary:'Cabin', sans-serif;
+  --font-primary:'Bebas Neue', cursive;
   --font-secondary: 'Lora', serif;
 }
 /*
