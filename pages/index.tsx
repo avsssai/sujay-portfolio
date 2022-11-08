@@ -20,63 +20,64 @@ const Home: NextPage = () => {
         <Intro />
       </IntroWrapper>
       <Header />
-
-      <ContentWrapper>
-        <ImageContainer>
-          <Image src="/baba-bust.svg" alt="An image of Sujay" layout="fill" />
-        </ImageContainer>
-        <TextContainer>
-          <Name
-            initial={{ opacity: 0, translateY: -50 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 1, delay: 3.2 }}
-          >
-            Sujayendra
-          </Name>
-          <Name
-            initial={{ opacity: 0, translateY: -50 }}
-            animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 1, delay: 3.5 }}
-          >
-            Krishna N
-          </Name>
-          <Title>Content Management Expert.</Title>
-          <Band>
-            Your brand might talk, I can make it <Color>sing.</Color>
-          </Band>
-          <ActionButton>Get in touch</ActionButton>
-          <SocialLinks>
-            <SocialMedia>
-              <Image
-                src="/twitter.svg"
-                alt="twitter social link"
-                layout="fill"
-              />
-            </SocialMedia>
-            <SocialMedia>
-              <Image
-                src="/Facebook.svg"
-                alt="facebook social link"
-                layout="fill"
-              />
-            </SocialMedia>
-            <SocialMedia>
-              <Image
-                src="/instagram.svg"
-                alt="instagram social link"
-                layout="fill"
-              />
-            </SocialMedia>
-            <SocialMedia>
-              <Image
-                src="/linkedin.svg"
-                alt="linkedin social link"
-                layout="fill"
-              />
-            </SocialMedia>
-          </SocialLinks>
-        </TextContainer>
-      </ContentWrapper>
+      <MaxWidthWrapper>
+        <ContentWrapper>
+          <ImageContainer>
+            <Image src="/baba-bust.svg" alt="An image of Sujay" layout="fill" />
+          </ImageContainer>
+          <TextContainer>
+            <Name
+              initial={{ opacity: 0, translateY: -50 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 1, delay: 3.2 }}
+            >
+              Sujayendra
+            </Name>
+            <Name
+              initial={{ opacity: 0, translateY: -50 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 1, delay: 3.5 }}
+            >
+              Krishna N
+            </Name>
+            <Title>Content Management Expert.</Title>
+            <Band>
+              Your brand might talk, I can make it <Color>sing.</Color>
+            </Band>
+            <ActionButton>Get in touch</ActionButton>
+            <SocialLinks>
+              <SocialMedia>
+                <Image
+                  src="/twitter.svg"
+                  alt="twitter social link"
+                  layout="fill"
+                />
+              </SocialMedia>
+              <SocialMedia>
+                <Image
+                  src="/Facebook.svg"
+                  alt="facebook social link"
+                  layout="fill"
+                />
+              </SocialMedia>
+              <SocialMedia>
+                <Image
+                  src="/instagram.svg"
+                  alt="instagram social link"
+                  layout="fill"
+                />
+              </SocialMedia>
+              <SocialMedia>
+                <Image
+                  src="/linkedin.svg"
+                  alt="linkedin social link"
+                  layout="fill"
+                />
+              </SocialMedia>
+            </SocialLinks>
+          </TextContainer>
+        </ContentWrapper>
+      </MaxWidthWrapper>
 
       <Footer />
     </Wrapper>
@@ -117,7 +118,7 @@ const ImageContainer = styled.div`
   }
   @media ${QUERIES.laptopAndUp} {
     margin: 0;
-    flex: 1;
+    /* flex: 1; */
   }
 `;
 
@@ -144,11 +145,13 @@ const TextContainer = styled(motion.div)`
   @media ${QUERIES.laptopAndUp} {
     margin: 0 0 0 10rem;
 
-    padding-top: 15rem;
-    flex: 1;
+    /* padding-top: 15rem; */
+    /* flex: 1; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    align-self: center;
   }
 `;
 
