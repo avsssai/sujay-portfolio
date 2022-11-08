@@ -143,7 +143,7 @@ const TextContainer = styled(motion.div)`
   padding: 0.1rem 1rem;
   margin-bottom: 1.5rem;
   @media ${QUERIES.laptopAndUp} {
-    margin: 0 0 0 10rem;
+    margin: 0;
 
     /* padding-top: 15rem; */
     /* flex: 1; */
