@@ -7,6 +7,7 @@ import { Twitter, Facebook, Linkedin, Instagram } from 'react-feather';
 import Footer from '../components/Footer/Footer';
 import Intro from '../components/Intro';
 import { motion } from 'framer-motion';
+import { QUERIES } from '../styles/styleUtils';
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,8 @@ const Home: NextPage = () => {
         <Intro />
       </IntroWrapper>
       <Header />
-      <MaxWidthWrapper>
+
+      <ContentWrapper>
         <ImageContainer>
           <Image src="/baba-bust.svg" alt="An image of Sujay" layout="fill" />
         </ImageContainer>
@@ -62,7 +64,8 @@ const Home: NextPage = () => {
             </SocialMedia>
           </SocialLinks>
         </TextContainer>
-      </MaxWidthWrapper>
+      </ContentWrapper>
+
       <Footer />
     </Wrapper>
   );
@@ -75,6 +78,10 @@ const Wrapper = styled.div`
   isolation: isolate;
 `;
 
+const MaxWidthWrapperStyled = styled.div`
+  min-height: min(90vh, 800px);
+`;
+
 const IntroWrapper = styled(motion.div)`
   position: absolute;
   height: 100vh;
@@ -85,8 +92,9 @@ const IntroWrapper = styled(motion.div)`
 `;
 
 const ImageContainer = styled.div`
-  height: 375px;
-  width: 350px;
+  min-height: 375px;
+  min-width: 250px;
+  width: 100%;
   position: relative;
   display: block;
   margin: auto;
@@ -95,6 +103,25 @@ const ImageContainer = styled.div`
   & > img {
     margin-left: -100px;
   }
+  @media ${QUERIES.laptopAndUp} {
+    margin: 0;
+    flex: 1;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  /* align-items: center; */
+  min-height: min(90vh, 1200px);
+
+  @media ${QUERIES.laptopAndUp} {
+    flex-direction: row-reverse;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -102,28 +129,47 @@ const TextContainer = styled.div`
   margin: auto;
   padding: 0.1rem 1rem;
   margin-bottom: 1.5rem;
+  @media ${QUERIES.laptopAndUp} {
+    margin: 0 0 0 10rem;
+
+    padding-top: 15rem;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Name = styled.h1`
-  font-size: clamp(2vw, 84px, 128px);
-
+  font-size: clamp(32px, 84px, 148px);
+  /* font-size: 96px; */
   color: var(--color-textPrimary);
   font-family: var(--font-primary);
   font-weight: 400;
   line-height: 0.8;
+  text-align: center;
   &:last-of-type {
     margin-bottom: 0.5rem;
     color: var(--color-accentPink);
-    text-align: center;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    text-align: revert;
+    font-size: clamp(96px, 10vw, 148px);
   }
 `;
 
 const Title = styled.div`
   font-family: var(--font-secondary);
   color: var(--color-textPrimary);
-  font-size: 1.25rem;
+  font-size: clamp(24px, 1.5vw, 32px);
   margin-bottom: 0.5rem;
   text-align: center;
+  @media ${QUERIES.laptopAndUp} {
+    text-align: revert;
+    margin-bottom: 1rem;
+    /* width: 200px; */
+  }
 `;
 
 const Band = styled.h4`
@@ -131,8 +177,12 @@ const Band = styled.h4`
   color: var(--color-textPrimary);
   font-weight: normal;
   margin-bottom: 1.5rem;
-  font-size: 12px;
+  font-size: clamp(16px, 0.75vw, 20px);
   text-align: center;
+  @media ${QUERIES.laptopAndUp} {
+    text-align: revert;
+    /* width: 200px; */
+  }
 `;
 const Color = styled.span`
   color: var(--color-accentPink);
@@ -144,6 +194,9 @@ const SocialLinks = styled.div`
   position: relative;
   height: 40px;
   justify-content: space-between;
+  @media ${QUERIES.laptopAndUp} {
+    width: 200px;
+  }
 `;
 const SocialMedia = styled.div`
   display: flex;
@@ -169,6 +222,12 @@ const ActionButton = styled.button`
   font-family: var(--font-primary);
   font-weight: 500;
   margin-bottom: 1.5rem;
+  @media ${QUERIES.tabletAndUp} {
+    padding-left: 1rem;
+  }
+  @media ${QUERIES.laptopAndUp} {
+    width: 200px;
+  }
 `;
 
 export default Home;
