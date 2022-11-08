@@ -26,8 +26,20 @@ const Home: NextPage = () => {
           <Image src="/baba-bust.svg" alt="An image of Sujay" layout="fill" />
         </ImageContainer>
         <TextContainer>
-          <Name>Sujayendra</Name>
-          <Name>Krishna N</Name>
+          <Name
+            initial={{ opacity: 0, translateY: -50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, delay: 3.2 }}
+          >
+            Sujayendra
+          </Name>
+          <Name
+            initial={{ opacity: 0, translateY: -50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, delay: 3.5 }}
+          >
+            Krishna N
+          </Name>
           <Title>Content Management Expert.</Title>
           <Band>
             Your brand might talk, I can make it <Color>sing.</Color>
@@ -124,7 +136,7 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const TextContainer = styled.div`
+const TextContainer = styled(motion.div)`
   width: 100%;
   margin: auto;
   padding: 0.1rem 1rem;
@@ -140,7 +152,7 @@ const TextContainer = styled.div`
   }
 `;
 
-const Name = styled.h1`
+const Name = styled(motion.h1)`
   font-size: clamp(32px, 84px, 148px);
   /* font-size: 96px; */
   color: var(--color-textPrimary);
